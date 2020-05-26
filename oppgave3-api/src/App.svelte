@@ -40,12 +40,12 @@
     display: grid;
     padding: 0 20vw 0 20vw;
   }
-  .gif {
+  /* .gif {
     width: 40vw;
     height: 40vh;
     background-color: #eee;
     padding: 2rem;
-  }
+  }*/
 
   .sonic {
     width: 280px;

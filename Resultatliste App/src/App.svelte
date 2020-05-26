@@ -3,12 +3,9 @@
   import Player from "./Player.svelte";
   import AddPlayer from "./AddPlayer.svelte";
 
-  let players = [
-   // {
-    //  name: "Navn Navnesen",
-   //   points: 50
-    },
-  ];
+  let players = [];
+
+  // { name: 'Navn Navnesen', points: 50  }
 
   const addPlayer = e => {
     const newPLayer = e.detail;
