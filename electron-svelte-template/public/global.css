@@ -1,0 +1,208 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Spartan", sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  background-color: #fff;
+  color: rgb(255, 255, 255);
+  font-weight: 400;
+}
+
+/* Utilities */
+.container {
+  max-width: 800px;
+  margin: auto;
+  overflow: hidden;
+  padding: 0 2rem;
+  background: #5d5d5d;
+  height: 100vh;
+}
+
+main {
+  background: #5d5d5d;
+}
+
+/* Cards */
+.card {
+  padding: 1rem;
+  border: solid 4px black;
+  border-radius: 10px;
+  margin: 0.7rem 0;
+  background: white;
+  color: black;
+}
+
+.navn-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Grid */
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem;
+}
+
+.btn {
+  display: inline-block;
+  background: #bdd7d6;
+  color: rgb(255, 255, 255);
+  padding: 0.4rem 1.3rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 900;
+  border: solid 4px white;
+  cursor: pointer;
+  margin-right: 0.5rem;
+  transition: opacity 0.2s ease-in;
+  outline: none;
+}
+
+.btn-legg-til-spiller {
+  display: inline-block;
+  background: #809d9d;
+  color: rgb(255, 255, 255);
+  padding: 0.4rem 1.3rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 900;
+  border: solid 3px white;
+  cursor: pointer;
+  margin-right: 0.5rem;
+  transition: opacity 0.2s ease-in;
+  outline: none;
+}
+
+.btn-pluss-en {
+  display: inline-block;
+  background: #516465;
+  color: #eff2dd;
+  padding: 0.4rem 0.7rem;
+  font-size: 1rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-right: 0.5rem;
+  transition: opacity 0.2s ease-in;
+  outline: none;
+}
+
+.btn-minus-en {
+  display: inline-block;
+  background: #eff2dd;
+  color: #516465;
+  padding: 0.4rem 0.7rem;
+  font-size: 1rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-right: 0.5rem;
+  transition: opacity 0.2s ease-in;
+  outline: none;
+}
+
+.btn-slett {
+  display: inline-block;
+  background: #ee6b62;
+  color: #ffffff;
+  padding: 0.4rem 0.7rem;
+  font-size: 1rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-right: 0.5rem;
+  transition: opacity 0.2s ease-in;
+  outline: none;
+}
+
+.btn-opp-ned {
+  display: inline-block;
+  background: #bdd7d6;
+  color: #000000;
+  padding: 0.4rem 0.7rem;
+  font-size: 1rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-right: 0.5rem;
+  transition: opacity 0.2s ease-in;
+  outline: none;
+}
+
+.btn-primary,
+.bg-primary,
+.badge-primary,
+.alert-primary {
+  background: #bdd7d6;
+  color: #fff;
+}
+
+.bakgrunn {
+  background: #809d9d;
+  color: #fff;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+/* Forms */
+input {
+  margin: 1.2rem 0;
+  outline: none;
+}
+
+.form-text {
+  display: block;
+  margin-top: 0.3rem;
+  color: black;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"],
+input[type="number"],
+select,
+textarea {
+  display: block;
+  width: 100% !important;
+  padding: 0.4rem;
+  font-size: inherit;
+  border: 2px solid black;
+  font-family: "Spartan", sans-serif;
+
+  border-radius: 5px;
+}
+
+input[type="submit"],
+button {
+  font: inherit;
+  font-weight: 700;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.7rem 2rem;
+  z-index: 1;
+  width: 100%;
+  background: #809d9d;
+  opacity: 0.9;
+  margin-bottom: 1rem;
+}

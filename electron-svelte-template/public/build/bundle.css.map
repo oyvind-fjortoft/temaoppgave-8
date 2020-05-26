@@ -1,0 +1,14 @@
+{
+  "version": 3,
+  "file": "bundle.css",
+  "sources": [
+    "../../App.svelte",
+    "../../Player.svelte"
+  ],
+  "sourcesContent": [
+    "<script>\n  export let name;\n</script>\n\n<style>\n  main {\n    text-align: center;\n    padding: 1em;\n    max-width: 240px;\n    margin: 0 auto;\n  }\n  h1 {\n    color: #ff3e00;\n    text-transform: uppercase;\n    font-size: 4em;\n    font-weight: 100;\n  }\n  @media (min-width: 640px) {\n    main {\n      max-width: none;\n    }\n  }\n</style>\n\n<main>\n  <h1>Bajs {name}!</h1>\n  <p>\n    Visit the\n    <a href=\"https://svelte.dev/tutorial\">Svelte tutorial</a>\n    to learn how to build Svelte apps.\n  </p>\n</main>\n",
+    "<script>\n  import { createEventDispatcher } from \"svelte\";\n  import { players } from \"./store\";\n  const dispatch = createEventDispatcher();\n  export let name;\n  export let points;\n  let showControls = false;\n  const addPoint = () => {\n    points += 1;\n  };\n  const removePoint = () => (points -= 1);\n  const toggleControls = () => (showControls = !showControls);\n  const onDelete = () => dispatch(\"removeplayer\", name);\n</script>\n\n<style>\n  h1 {\n    color: #000000;\n    font-weight: 500;\n  }\n  h3 {\n    margin-bottom: 10px;\n    font-weight: 400;\n  }\n</style>\n\n<main>\n\n  <div class=\"card\">\n    <div class=\"navn-buttons\">\n      <h1>{name}</h1>\n      <div class=\"opp-ned-slett\">\n        <button class=\"btn-opp-ned\" on:click={toggleControls}>\n          {#if showControls}▲{:else}▼{/if}\n        </button>\n        <button class=\"btn-slett\" on:click={onDelete}>✕</button>\n      </div>\n    </div>\n    <div class=\"poeng\">\n      <h3>Poeng: {points}</h3>\n      {#if showControls}\n        <button class=\"btn-minus-en\" on:click={removePoint}>-1</button>\n        <button class=\"btn-pluss-en\" on:click={addPoint}>+1</button>\n        <input type=\"number\" bind:value={points} />\n      {/if}\n    </div>\n  </div>\n\n</main>\n"
+  ],
+  "names": [],
+  "mappings": "AAKE,IAAI,eAAC,CAAC,AACJ,UAAU,CAAE,MAAM,CAClB,OAAO,CAAE,GAAG,CACZ,SAAS,CAAE,KAAK,CAChB,MAAM,CAAE,CAAC,CAAC,IAAI,AAChB,CAAC,AACD,EAAE,eAAC,CAAC,AACF,KAAK,CAAE,OAAO,CACd,cAAc,CAAE,SAAS,CACzB,SAAS,CAAE,GAAG,CACd,WAAW,CAAE,GAAG,AAClB,CAAC,AACD,MAAM,AAAC,YAAY,KAAK,CAAC,AAAC,CAAC,AACzB,IAAI,eAAC,CAAC,AACJ,SAAS,CAAE,IAAI,AACjB,CAAC,AACH,CAAC;ACLD,EAAE,cAAC,CAAC,AACF,KAAK,CAAE,OAAO,CACd,WAAW,CAAE,GAAG,AAClB,CAAC,AACD,EAAE,cAAC,CAAC,AACF,aAAa,CAAE,IAAI,CACnB,WAAW,CAAE,GAAG,AAClB,CAAC"
+}
